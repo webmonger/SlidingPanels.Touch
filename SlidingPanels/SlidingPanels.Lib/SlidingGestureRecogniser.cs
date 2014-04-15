@@ -112,10 +112,10 @@ namespace SlidingPanels.Lib
 		/// We want to prevent any other gesture to be recognized on the window!
 		/// </summary>
 		/// <param name="preventingGestureRecognizer">Preventing gesture recognizer.</param>
-		public override bool CanBePreventedByGestureRecognizer (UIGestureRecognizer preventingGestureRecognizer)
-		{
-			return State != UIGestureRecognizerState.Began;
-		}
+//		public override bool CanBePreventedByGestureRecognizer (UIGestureRecognizer preventingGestureRecognizer)
+//		{
+//			return State != UIGestureRecognizerState.Began;
+//		}
 
 		/// <summary>
 		/// Manages what happens when the user begins a possible slide 

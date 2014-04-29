@@ -226,7 +226,7 @@ namespace SlidingPanels.Lib
         /// </summary>
         /// <returns>The container for type.</returns>
         /// <param name="type">Type.</param>
-        private PanelContainer ExistingContainerForType(PanelType type)
+		public PanelContainer ExistingContainerForType(PanelType type)
         {
             PanelContainer container = _panelContainers.FirstOrDefault(p => p.PanelType == type);
             if (container == null)

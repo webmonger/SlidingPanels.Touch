@@ -22,10 +22,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.CoreGraphics;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using UIKit;
 using SlidingPanels.Lib.PanelContainers;
-using System.Drawing;
+using CoreGraphics;
 
 namespace SlidingPanels.Lib
 {
@@ -39,7 +39,7 @@ namespace SlidingPanels.Lib
         /// <summary>
         ///     How fast do we show/hide panels.
         /// </summary>
-        private const float AnimationSpeed = 0.25f;
+        private nfloat AnimationSpeed = 0.25f;
 
         #endregion
 
@@ -84,7 +84,7 @@ namespace SlidingPanels.Lib
 
         public CGColor ShadowColor { get { return View.Layer.ShadowColor; } set { View.Layer.ShadowColor = value; } }
 
-        public float ShadowOpacity { get { return View.Layer.ShadowOpacity; } set { View.Layer.ShadowOpacity = value; } }
+		public float ShadowOpacity { get { return View.Layer.ShadowOpacity; } set { View.Layer.ShadowOpacity = value; } }
 
         /// <summary>
         ///     This is a handy Accessor to get the currently active panel, if any.
@@ -142,8 +142,8 @@ namespace SlidingPanels.Lib
 			View.Layer.MasksToBounds = false;
 			View.Layer.ShadowOpacity = ShadowOpacity;
 
-			RectangleF shadow = View.Bounds;
-			shadow.Inflate(new SizeF(3,3));
+			CGRect shadow = View.Bounds;
+			shadow.Inflate(new CGSize(3,3));
 			View.Layer.ShadowPath = UIBezierPath.FromRoundedRect(shadow, 0).CGPath;
 		}
 
